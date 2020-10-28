@@ -1,7 +1,4 @@
 const eqArrays = (actual, expected) =>{
-  if (actual.length === 0 && expected.length === 0){
-    return true;
-  }
   if (actual.length !== expected.length){
     return false;
   }
@@ -10,8 +7,9 @@ const eqArrays = (actual, expected) =>{
     if (actual[i] !== expected[i]){
       return false;
     }
-    return true;
+    
   }
+  return true;
 }
 const assertArraysEqual = (actual, expected) =>{
   if (eqArrays (actual, expected) === true) {
