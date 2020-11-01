@@ -12,12 +12,16 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
+// inside the loop, 
+// increment the counter for each item:
+//   set a property with that string key to:
+//     the value that was already there (or zero if nothing there) with 1 added to it.
   for (const item of allItems) {
     if (itemsToCount[item]) { 
       if (results[item]) {
-        results[item] += 1;
-  } else {
-    results[item] = 1;
+        results[item] += 1;//this happen after the else and add on to it
+  } else {//this actually happen first cuz the result obj was empty
+    results[item] = 1; 
   }
 }
   }

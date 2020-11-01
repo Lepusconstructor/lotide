@@ -24,8 +24,7 @@ const assertArraysEqual = (actual, expected) =>{
 // a function naemd without return a subset of a given array, removing unwanted elements.
 //This function should take in a source array and a itemsToRemove array. It should return a new array with only those elements from source that are not present in the itemsToRemove array.
 const without = (source, itemsToRemove) =>{
-  let newArr = source;
-  let filtered = newArr.filter(element => !itemsToRemove.includes(element));
+  let filtered = source.filter(element => !itemsToRemove.includes(element));
   return filtered;
 }
 console.log(without([1, 2, 3], [1])) // => [2, 3]
