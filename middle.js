@@ -1,17 +1,17 @@
-const eqArrays = (actual, expected) =>{
-  if (actual.length !== expected.length){
+const eqArrays = (actual, expected) => {
+  if (actual.length !== expected.length) {
     return false;
   }
   
-  for (let i = 0; i < actual.length; i++){
-    if (actual[i] !== expected[i]){
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
       return false;
     }
     
   }
   return true;
 }
-const assertArraysEqual = (actual, expected) =>{
+const assertArraysEqual = (actual, expected) => {
   if (eqArrays (actual, expected) === true) {
     console.log(`⭕Arrays are equal: "${actual}" === "${expected}"`);
   } else {
@@ -33,16 +33,17 @@ For arrays with an even number of elements, an array containing the two elements
 middle([1, 2, 3, 4]) // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 */
-const middle = (argArr) =>{
+const middle = (argArr) => {
   
   let newArr = [];
-  if (argArr.length < 3){
+  let arrLength = argArr.length;
+  if (arrLength < 3) {
     newArr = [];
-  } else if (argArr.length >= 3){
-    if (argArr.length % 2 === 0){
-      newArr.push(argArr[argArr.length / 2 - 1], argArr[argArr.length / 2]);
-    } else if (argArr.length % 2 !== 0){
-    newArr.push(argArr[Math.trunc(argArr.length / 2)]);
+  } else if (arrLength >= 3) {
+    if (arrLength % 2 === 0){ 
+      newArr.push(argArr[arrLength / 2 - 1], argArr[arrLength / 2]);
+    } else if (arrLength % 2 !== 0) {
+    newArr.push(argArr[Math.trunc(arrLength / 2)]);
   } 
   }
   return newArr;
@@ -55,8 +56,9 @@ console.log(middle([1, 2, 3, 4, 5])) // => [3]
 console.log(middle([1, 2, 3, 4])) // => [2, 3]
 console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
 assertArraysEqual(middle([1, 2, 3, 4]), [2,3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]);
 */
+assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]);
+
 
 assertArraysEqual(middle([1,2]), []);
 assertArraysEqual(middle([1]),[]);
