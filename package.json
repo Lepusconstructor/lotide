@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@lepusconstructor/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "useful function for assertion",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Lepusconstructor/lotide.git"
   },
-  "author": "",
+  "author": "Sunny Cheng",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lepusconstructor/lotide/issues"
