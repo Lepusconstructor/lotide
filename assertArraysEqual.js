@@ -1,4 +1,5 @@
 
+//const eqArrays = require('./eqArrays');
 
 const eqArrays = (actual, expected) =>{
   if (actual.length !== expected.length){
@@ -13,6 +14,7 @@ const eqArrays = (actual, expected) =>{
   }
   return true;
 }
+
 const assertArraysEqual = (actual, expected) =>{
   if (eqArrays (actual, expected) === true) {
     console.log(`⭕Arrays are equal: "${actual}" === "${expected}"`);
@@ -21,6 +23,7 @@ const assertArraysEqual = (actual, expected) =>{
   }
 
 };
+//module.exports = assertArraysEqual;
 assertArraysEqual(['ladies','that','code'],['ladies','that','code']);
 assertArraysEqual([1,2,3],[1,2,3]);
 assertArraysEqual(['they','rock'],[1,2,3]);

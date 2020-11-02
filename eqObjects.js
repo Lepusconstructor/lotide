@@ -32,8 +32,8 @@ const eqObjects = function(obj1, obj2) {
     if (arr1[item] !== arr2[item]){//if (!obj2[item])
         return false;
       }
-    if (Array.isArray(obj1[item])){
-      if (!eqArrays(obj1[item],obj2[item])){
+    if (Array.isArray(obj1[item])){//check for nested array
+      if (!eqArrays(obj1[item],obj2[item])){//use eqArray to check if the arrays are equal
         return false;
       } 
     }
@@ -45,6 +45,7 @@ const eqObjects = function(obj1, obj2) {
   }
   return true;
 };
+
 //primitive test
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };

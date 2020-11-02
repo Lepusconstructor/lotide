@@ -7,6 +7,7 @@ const assertEqual = function(actual, expected) {
 
 };
 // string: a strings that we need to look through
+
 const countLetters = string =>{
   const letters = {}; //create a counter
   //use for of to loop through the string
